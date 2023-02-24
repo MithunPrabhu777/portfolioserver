@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.post(`${process.env.BASE_URL}/api/form`,(req,res) => {
+app.post(`/api/form`,(req,res) => {
     let data = req.body;
 
     let smtpTransport = nodemailer.createTransport({
